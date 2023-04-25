@@ -22,14 +22,15 @@ const Register = (props) => {
     setConfirmPassword(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const registerSubmitHandler = (event) => {
     event.preventDefault();
     console.log(username, email, password, confirmPassword);
+    props.showLoginFunc();
   };
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={registerSubmitHandler}>
         <label>Username: </label>
         <input type="text" onChange={usernameChangeHandler} value={username} />
         <label>Email: </label>

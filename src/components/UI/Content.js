@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Login from "../login/Login";
 import Register from "../login/Register";
+import KnjigaTabela from "../knjige/KnjigeTabela";
 
 const Content = () => {
   const [jwtToken, setJwtToken] = useState("");
@@ -21,6 +22,7 @@ const Content = () => {
       ) : (
         <Register showLoginFunc={showLoginHandler} />
       )}
+      <KnjigaTabela />
     </div>
   );
 };
